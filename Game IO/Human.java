@@ -15,7 +15,6 @@ public class Human implements Player {
     }
     
     public String getName(){return name;}
-    
     public int getMove() {
         System.out.println("Your turn. Type a number between 1 and 4 inclusive: ");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -30,7 +29,7 @@ public class Human implements Player {
             }
         } catch(IOException ioe) {
             ioe.printStackTrace();
-            System.out.println("I dunno wtf just happened but I don't really care...");
+            System.out.println("I dunno wth just happened but I don't really care...");
             return 0;
         } catch(NumberFormatException nfe) {
             System.out.println("Not a number. Try again.");

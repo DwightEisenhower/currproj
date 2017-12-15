@@ -57,24 +57,36 @@ public class Game {
     }
     
     public void play() {
+        ArrayList<Integer> tokenCount = new ArrayList<>(list.size());
         int tokens = (int)(Math.random()*51+25);
         int pnum = 0;
         System.out.println("There are "+tokens+" tokens this game.");
         while(tokens > 0) {
-            try {
-                System.out.println("It's player "+list.get(0).getName()+"'s turn. What's your move? (enter int 1-4)");
-                String input = reader.readLine();
-                int move = Integer.parseInt(input);
-                if(move >= 1 && move <= 4)
-                    if(tokens - move < 0)
-                        System.out.println("Your move is valid but there are not enough tokens for it. Try again.");
-            } catch(IOException ioe) {
-                ioe.printStackTrace();
-                System.out.println("I dunno wth just happened but I don't really care...");
-                System.exit(0);
-            } catch(NumberFormatException nfe) {
-                System.out.println("You need to give me an int, bro. That was anything but an int.");
+            System.out.println("It's player "+list.get(pnum).getName()+"'s turn.");
+            Player temp = list.get(pnum);
+            System.out.println("What's your move? (enter int 1-4)");
+            int move = list.get(0).getMove();
+            if(tokens - move < 0)
+                System.out.println("Your move is valid but there are not enough tokens for it. Try again with a different number.");
+            else {
+                tokenCount.set(pnum, tokenCount.get(pnum)+move);
+                tokens -= move;
             }
+        }
+        int smallest = 0;//smallest index
+        for(int i = 0; i < tokenCount.size(); i++)
+            if(tokenCount.get(i) < tokenCount.get(smallest))
+                smallest = i;
+        System.out.println("Player "+list.get(smallest)+" wins!");
+        try {
+            System.out.println("Do you wish to play again? Y/N");
+            String temp = reader.readLine();
+            if(temp.toUpperCase().equals("Y"))
+                play();
+            else
+                System.exit(0);
+        } catch(IOException ioe) {
+            ioe.printStackTrace();
         }
     }
 }
