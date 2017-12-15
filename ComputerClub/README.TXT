@@ -1,0 +1,3 @@
+- Solution in one file
+- 5 questions, first 5 outputs are considered answers
+    - print answers as you get them so if the program crashes at the end you have other 

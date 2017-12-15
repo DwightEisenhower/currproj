@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=SLL
+comment0.text=\n\ Singly\ Linked\ List\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=x
+comment2.target=void\ add(java.lang.Integer)
+comment3.params=x
+comment3.target=boolean\ remove(java.lang.Integer)
+comment4.params=x
+comment4.target=boolean\ contains(java.lang.Integer)
+comment5.params=
+comment5.target=int\ size()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+numComments=7

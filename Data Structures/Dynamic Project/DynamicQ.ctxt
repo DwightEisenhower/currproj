@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=DynamicQ
+comment1.params=
+comment1.target=void\ main()
+comment2.params=liftWeight
+comment2.target=void\ barbellWeights(int)
+comment2.text=\#\r\n\ Olympic\ weight\ lifting\ has\ strict\ rules\ for\ loading\ weight\ on\ the\ bar.\ Each\ lifter\ identifies\r\n\ the\ amount\ of\ weight\ they\ will\ attempt\ to\ lift\ (liftWeight)\ in\ kg\ and\ the\ bar\ is\ loaded\ as\ \r\n\ follows.\r\n\ \r\n\ An\ equal\ amount\ of\ weight\ is\ added\ to\ each\ side\ of\ the\ barbell\ using\ the\ fewest\ number\ of\ \r\n\ weightlifting\ plates\ as\ possible.\ \r\n\ Plates\ comes\ in\ the\ following\ weights\:\ 1/2kg,\ 1kg,\ 2kg,\ 5kg,\ 10kg,\ 20kg,\ 50kg\r\n\ In\ addition,\ the\ barbell\ itself\ weighs\ 50kg.\r\n\ \r\n\ Identify\ the\ fewest\ number\ of\ plates\ necessary\ to\ add\ to\ the\ barbell\ for\ the\ given\ weight.\r\n
+comment3.params=data
+comment3.target=void\ longestSub(java.util.ArrayList)
+comment3.text=\#\r\n\ Given\ an\ array\ data\ find\ the\ length\ of\ the\ longest\ sublist\ in\ data\ that\ contains\ strictly\ \r\n\ increasing\ values.\ You\ should\ not\ rearrange\ the\ values\ in\ data.\ \r\n\ \r\n\ For\ example\:\ {3,\ 5,\ 4,\ 7,\ 9,\ 6}\ would\ return\ 4\ as\ the\ longest\ increasing\ sublist\ is\ {3,\ 4,\ 7,\ 9}\r\n\ {3,\ 5,\ 4,\ 7,\ 10,\ 8,\ 10}\ would\ return\ 5\r\n\ {3}\ would\ return\ 1\r\n\ {3,\ 0,\ 1,\ -4,\ 1,\ 4,\ 2}\ would\ return\ 3\r\n
+comment4.params=points
+comment4.target=void\ pointPicker(int[][])
+comment4.text=\#\r\n\ You\ start\ in\ the\ [0][0]\ position\ of\ the\ points\ 2D\ array\ and\ must\ end\ at\ bottom\ right.\ On\ each\r\n\ spot\ you\ may\ move\ either\ down\ or\ right,\ never\ left\ or\ up.\ Each\ spot\ is\ worth\ some\ number\ of\r\n\ points\ identified\ by\ the\ value\ at\ each\ spot\ in\ the\ array.\ Identify\ the\ maximum\ amount\ of\r\n\ points\ you\ can\ earn\ during\ your\ travel\ from\ the\ beginning\ to\ the\ end.\ \r\n\ \r\n\ The\ values\ in\ the\ points\ array\ may\ be\ either\ positive,\ 0\ or\ negative.\ You\ may\ always\ add\ the\r\n\ points\ in\ the\ [0][0]\ spot\ to\ your\ score.\r\n\ \r\n\ Hint\:\ This\ may\ seem\ tricky\ now\ that\ there\ is\ a\ two\ dimensional\ array,\ but\ the\ dynamic\ programming\ logic\ is\ the\ \r\n\ same.\ Draw\ some\ possible\ inputs\ and\ find\ the\ answer\ by\ hand\ using\ dynamic\ programming\ to\ get\ an\ idea\ of\ how\r\n\ you\ should\ code\ this.\r\n
+comment5.params=maxWeight\ valuables
+comment5.target=void\ bankRobbery(int,\ java.util.HashMap)
+comment5.text=\#\r\n\ You\ have\ broken\ into\ a\ bank\ vault\ and\ are\ about\ to\ commit\ a\ brilliant\ robbery.\ The\ vault\r\n\ contains\ a\ variety\ of\ items\ that\ all\ have\ monetary\ values\ (the\ value\ in\ the\ hashmap).\ Each\r\n\ of\ these\ items\ has\ a\ unique\ associated\ weight\ (the\ key\ in\ the\ hashmap).\ \r\n\ \r\n\ You\ can\ only\ carry\ so\ much\ out\ of\ the\ bank\ vault\ and\ you\ want\ to\ maximize\ the\ amount\ of\ money\r\n\ you\ make.\ Identify\ the\ maximum\ amount\ of\ money\ you\ can\ make\ without\ going\ over\ the\ maxWeight\r\n\ you\ can\ hold.\r\n\ \r\n\ You\ may\ assume\ there\ is\ unlimited\ of\ each\ item\ and\ each\ item\ has\ a\ positive\ weight\ and\ value.\r\n
+numComments=6

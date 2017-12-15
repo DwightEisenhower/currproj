@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=UnderThirteenException
+comment1.params=age
+comment1.target=UnderThirteenException(int)
+comment2.params=
+comment2.target=void\ getError()
+numComments=3

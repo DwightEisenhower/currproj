@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.target=HashQuestions
+comment1.params=large\ small
+comment1.target=boolean\ isSubset(int[],\ int[])
+comment1.text=\#\n\ Analysis\:\ This\ method\ can\ be\ solved\ in\ nlog(n)\ time\ where\ n\ is\ the\ length\ of\ the\ large\ array.\n\ This\ is\ done\ by\ sorting\ large,\ then\ verifying\ whether\ each\ element\ in\ small\ is\ in\ large\ via\ a\n\ binary\ search.\n\ \n\ Complete\ this\ method\ with\ a\ Hashset\ in\ O(n)\ time.\n
+comment2.params=data
+comment2.target=boolean\ opposites(Pair[])
+comment2.text=\#\n\ Analysis\:\ This\ method\ can\ be\ solved\ in\ n^2\ time\ where\ n\ is\ the\ length\ of\ the\ array.\n\ This\ is\ done\ by\ comparing\ every\ pair\ to\ every\ other\ pair\ in\ the\ array\ and\ looking\ for\ an\ opposite.\n\ \n\ Complete\ this\ method\ with\ a\ Hash\ in\ O(n)\ time.\n
+comment3.params=data
+comment3.target=void\ fourSum(int[])
+comment3.text=\#\n\ Analysis\:\ This\ method\ can\ be\ completed\ in\ n^2\ time\ where\ n\ is\ the\ length\ of\ the\ array.\n\ This\ is\ done\ by\ using\ 4\ nested\ for\ loops\ comparing\ every\ possible\ combination\ of\ values.\n\ \n\ Complete\ this\ method\ in\ O(n^2)\ time\ using\ a\ Hash.\ The\ time\ cannot\ be\ improved,\ but\ the\ code\ will\ be\ more\n\ simple\ and\ easier\ to\ read.\n
+comment4.params=data
+comment4.target=void\ sequence(int[])
+comment4.text=\#\n\ Analysis\:\ This\ method\ can\ be\ completed\ in\ nlogn\ time\ where\ n\ is\ the\ length\ of\ the\ array.\ \n\ This\ can\ be\ done\ by\ sorting\ the\ array\ and\ then\ iterating\ through\ it\ to\ find\ the\ longest\ list\ of\ consecutive\ elements.\n\ \n\ Complete\ this\ method\ with\ a\ Hashset\ in\ O(n)\ time.\n
+comment5.params=value
+comment5.target=int\ f(int)
+comment5.text=\#\n\ Analysis\:\ This\ calculation\ requires\ numerous\ redundant\ calculations.\ For\ example\ to\ calculate\ f(5)\ you\ must\ \n\ calculate\ f(4)\ and\ f(3).\ To\ calculate\ f(4)\ you\ need\ f(3)\ and\ f(2).\ But\ we've\ already\ gone\ through\ the\ trouble\n\ of\ calculating\ f(3)\!\ This\ makes\ the\ runtime\ of\ a\ strict\ recursive\ solution\ 2^n.\n\ \n\ Complete\ this\ method\ recursively\ with\ a\ Hash\ in\ O(n)\ time.\ Do\ this\ by\ avoiding\ redundant\ calculations.\n
+comment6.params=hash\ value
+comment6.target=int\ fHelper(java.util.HashMap,\ int)
+numComments=7

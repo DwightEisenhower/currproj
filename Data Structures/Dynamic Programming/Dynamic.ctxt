@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Dynamic
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=value
+comment2.target=void\ f(int)
+comment3.params=amount\ coins
+comment3.target=void\ fewestCoins(int,\ java.util.ArrayList)
+comment4.params=offers
+comment4.target=void\ maxDonations(java.util.ArrayList)
+numComments=5

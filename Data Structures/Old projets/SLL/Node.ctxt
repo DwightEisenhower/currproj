@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Node
+comment0.text=\n\ Contains\ a\ piece\ of\ data\ and\ any\ number\ of\ references\ to\ other\ nodes\n
+comment1.params=value
+comment1.target=Node(java.lang.Integer)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+numComments=3

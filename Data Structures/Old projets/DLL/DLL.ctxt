@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=DLL
+comment1.params=
+comment1.target=void\ main()
+comment2.params=x
+comment2.target=void\ add(java.lang.Object)
+comment3.params=x
+comment3.target=boolean\ remove(java.lang.Object)
+comment4.params=x
+comment4.target=boolean\ contains(java.lang.Object)
+comment5.params=
+comment5.target=int\ size()
+comment6.params=
+comment6.target=java.lang.String\ toString()
+comment7.params=
+comment7.target=java.util.Iterator\ iterator()
+numComments=8

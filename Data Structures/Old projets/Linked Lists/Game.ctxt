@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Game
+comment0.text=Look\ in\ the\ ReadMe\ for\ info\ on\ this\ project\ *
+comment1.params=players
+comment1.target=Game(int)
+comment1.text=\#\n\ Initialize\ and\ add\ players\ players\ to\ the\ PLL.\n
+comment2.params=
+comment2.target=void\ main()
+comment3.params=
+comment3.target=void\ playGame()
+comment3.text=\#\n\ Simulate\ an\ entire\ play\ of\ the\ game.\ A\ game\ is\ played\ as\ follows.\n\ \n\ As\ long\ as\ there\ is\ more\ than\ 1\ player\ in\ the\ game,\ play\ another\n\ round.\ A\ round\ consists\ of\ each\ player\ taking\ a\ turn,\ removing\n\ the\ player\ with\ the\ fewest\ number\ of\ wins\ and\ finally\ selecting\n\ a\ new\ starting\ player.\n\ \n\ Be\ sure\ to\ display\ the\ remaining\ players\ at\ the\ beginning\ of\ each\ \n\ round\ and\ the\ winner\ after\ the\ game\ is\ over.\n
+numComments=4
