@@ -40,7 +40,7 @@ Computer:
         - Starting with player 0, state their name and ask them for a move.
         - Update and display the number of tokens after a valid move.
         - Continue cycling through players until there is a winner.
-        - Diplay all the players with their number of wins.
+        - Display all the players with their number of wins.
         - Display the winner's name with a congratulations and ask if they want to play again. If they
             do, replay the game from the start (no need to select players again).
         - If not, you can exit the program with the line System.exit(0);
