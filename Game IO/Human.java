@@ -7,9 +7,10 @@ public class Human implements Player {
             int num = Integer.parseInt(name.substring(0,1));
             throw new IllegalArgumentException("Player name cannot start with a number. Please retry.");
         } catch(NumberFormatException ex) {
-            if(name.contains(" ") || name.contains("\n"))
+            if(name.contains(" ") || name.contains("\n")) {
                 System.out.println("No spaces or combinations that will mess with formatting.");
-            else
+                throw new IllegalArgumentException("No spaces.");
+            } else
                 this.name = name;
         }
     }
