@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=QuizMaker
+comment1.params=
+comment1.target=void\ main()
+comment2.params=in\ out
+comment2.target=void\ makeQuiz(java.io.File,\ java.io.File)
+comment3.params=in
+comment3.target=java.util.HashMap\ loadStateHash(java.io.File)
+comment4.params=file
+comment4.target=java.util.ArrayList\ readFromFile(java.io.File)
+comment5.params=f\ lines
+comment5.target=boolean\ writeToFile(java.io.File,\ java.util.ArrayList)
+numComments=6
