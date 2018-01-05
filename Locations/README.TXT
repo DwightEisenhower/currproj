@@ -33,4 +33,4 @@ each unique quiz. The file should have the following formatting.
 
 1. (b)
 2. (c)
-3. (a) 
+3. (a)

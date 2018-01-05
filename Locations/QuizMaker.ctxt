@@ -1,5 +1,6 @@
 #BlueJ class context
 comment0.target=QuizMaker
+comment0.text=Error\ Codes\ (would\ go\ in\ the\ readme\ but\ 1.\ I\ don't\ submit\ it\ 2.\ no\ one\ reads\ it)\n\ 1\ \=\ IO\ exception\n
 comment1.params=
 comment1.target=void\ main()
 comment2.params=in\ out
@@ -10,4 +11,8 @@ comment4.params=file
 comment4.target=java.util.ArrayList\ readFromFile(java.io.File)
 comment5.params=f\ lines
 comment5.target=boolean\ writeToFile(java.io.File,\ java.util.ArrayList)
-numComments=6
+comment6.params=min\ max
+comment6.target=int\ random(int,\ int)
+comment7.params=o
+comment7.target=void\ print(java.lang.Object)
+numComments=8
