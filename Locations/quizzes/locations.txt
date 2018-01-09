@@ -1,0 +1,250 @@
+1. The capital of Maine is...
+null
+Harrisburg
+Cheyenne
+Phoenix
+2. The capital of Arizona is...
+null
+Austin
+Harrisburg
+Baton Rouge
+3. The capital of Nevada is...
+null
+Sacramento
+Trenton
+Jefferson City
+4. The capital of South Carolina  is...
+null
+Lansing
+Montgomery
+Albany
+5. The capital of North Dakota is...
+null
+Juneau
+Tallahassee
+Raleigh
+6. The capital of Virginia is...
+null
+Atlanta
+Denver
+Boise
+7. The capital of Florida is...
+null
+Salt Lake City
+Montpelier
+Topeka
+8. The capital of Illinois is...
+null
+Richmond
+Carson City
+Pierre
+9. The capital of North Carolina is...
+null
+Jefferson City
+Salem
+Raleigh
+10. The capital of Kentucky is...
+null
+Pierre
+Denver
+Jefferson City
+11. The capital of Georgia is...
+null
+Boston
+Providence
+Nashville
+12. The capital of North Dakota is...
+null
+Saint Paul
+Austin
+Tallahassee
+13. The capital of Maryland is...
+null
+Pierre
+Jefferson City
+Topeka
+14. The capital of New York is...
+null
+Annapolis
+Saint Paul
+Salem
+15. The capital of Louisiana is...
+null
+Trenton
+Lansing
+Annapolis
+16. The capital of Kansas is...
+null
+Saint Paul
+Frankfort
+Atlanta
+17. The capital of California is...
+null
+Baton Rouge
+Phoenix
+Springfield
+18. The capital of Idaho is...
+null
+Harrisburg
+Salem
+Concord
+19. The capital of Wyoming is...
+null
+Dover
+Hartford
+Carson City
+20. The capital of Oklahoma is...
+null
+Indianapolis
+Pierre
+Santa Fe
+21. The capital of Arizona is...
+null
+Frankfort
+Tallahassee
+Denver
+22. The capital of Arizona is...
+null
+Montgomery
+Montpelier
+Lansing
+23. The capital of Nebraska is...
+null
+Frankfort
+Montpelier
+Lansing
+24. The capital of New Jersey is...
+null
+Olympia
+Frankfort
+Helena
+25. The capital of California is...
+null
+Topeka
+Nashville
+Santa Fe
+26. The capital of Oregon is...
+null
+Salem
+Lincoln
+Lansing
+27. The capital of Arizona is...
+null
+Richmond
+Albany
+Springfield
+28. The capital of Wisconsin is...
+null
+Denver
+Boise
+Montgomery
+29. The capital of Ohio is...
+null
+Jackson
+Annapolis
+Sacramento
+30. The capital of Iowa is...
+null
+Topeka
+Indianapolis
+Austin
+31. The capital of Idaho is...
+null
+Atlanta
+Annapolis
+Lincoln
+32. The capital of Michigan is...
+null
+Frankfort
+Tallahassee
+Sacramento
+33. The capital of Minnesota is...
+null
+Concord
+Dover
+Concord
+34. The capital of Arizona is...
+null
+Helena
+Des Moines
+Des Moines
+35. The capital of Idaho is...
+null
+Jefferson City
+Providence
+Santa Fe
+36. The capital of Arizona is...
+null
+Oklahoma City
+Saint Paul
+Cheyenne
+37. The capital of Kansas is...
+null
+Salt Lake City
+Tallahassee
+Montpelier
+38. The capital of Arkansas is...
+null
+Nashville
+Indianapolis
+Phoenix
+39. The capital of South Carolina  is...
+null
+Providence
+Albany
+Springfield
+40. The capital of Ohio is...
+null
+Lincoln
+Columbia
+Richmond
+41. The capital of Alabama is...
+null
+Sacramento
+Springfield
+Honolulu
+42. The capital of Delaware is...
+null
+Bismarck
+Bismarck
+Montpelier
+43. The capital of South Dakota is...
+null
+Raleigh
+Topeka
+Columbia
+44. The capital of Mississippi is...
+null
+Little Rock
+Providence
+Saint Paul
+45. The capital of Hawaii is...
+null
+Des Moines
+Topeka
+Albany
+46. The capital of Ohio is...
+null
+Lincoln
+Des Moines
+Hartford
+47. The capital of Mississippi is...
+null
+Madison
+Lansing
+Honolulu
+48. The capital of Hawaii is...
+null
+Juneau
+Harrisburg
+Hartford
+49. The capital of New Mexico is...
+null
+Nashville
+Lansing
+Trenton
+50. The capital of New Mexico is...
+null
+Augusta
+Dover
+Jackson
