@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=QuizMaker
-comment0.text=System\ Exit\ Codes\ (would\ go\ in\ the\ readme\ but\ 1.I\ don't\ submit\ it;\ 2.no\ one\ reads\ it)\n\ 1\ \=\ IO\ exception\n
+comment0.text=System\ Exit\ Codes\ (would\ go\ in\ the\ readme\ but\ 1.I\ don't\ submit\ it;\ 2.no\ one\ reads\ it)\r\n\ 1\ \=\ IO\ exception\r\n\ \r\n
 comment1.params=
 comment1.target=void\ main()
 comment2.params=in\ out
