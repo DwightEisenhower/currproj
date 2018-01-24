@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Regex
+comment0.text=\n\ 4\ letter\ word\ in\ a\ sentence\n\ 4\ letter\ word\ w/o\ "m"\n\ 1\ character\ that's\ anything\n
+comment1.params=
+comment1.target=void\ main()
+numComments=2
