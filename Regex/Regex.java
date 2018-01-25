@@ -5,10 +5,15 @@ import java.util.*;
  * 4 letter word in a sentence
  * 4 letter word w/o "m"
  * 1 character that's anything
+ * 
+ * Find a word that has two non-consecutive a's --> \b\w*
+ * Find a phrase that ends in a single period or any number of exclamation points --> \b[.]?\W*
+ * Find a word that is at least 4 characters long --> \b\w\w\w\w*\b
+ * Find if a word follows the "i before e except after c" rule --> 
  */
 public class Regex {
     public static void main() {
-        String line = "I have 2/3 of the longest races today.";
+        String line = "Swimmer goes";
         String regex = "";
         Scanner in = new Scanner(System.in);
         System.out.println(line);
@@ -18,6 +23,7 @@ public class Regex {
         Matcher m = p.matcher(line);
         if(m.find()) {
             System.out.println("Match found");
+            System.out.println(m.group());//shows the match
         } else {
             System.out.println("No match found");
         }
@@ -36,4 +42,12 @@ public class Regex {
  * \S - any non-space character
  * \w - same as [A-Za-z] but also includes word parts
  * \W - anything that isn't a word part
+ * \b - boundary, no physical space but represents the distance b/n 2 diff types of char-s
+ * . - match any character
+ * | - match either of the characters on the left and right sides of it (i|a --> either "i" or "a"). Can be combined
+ *      (ab)|(bc)|(ca)
+ * ? - previous character is optional (colou?r)
+ * + - match as many characters as possible (hel+o --> will catch if someone types "helllllo")
+ * * - match all or none (ay*lmao
+ * 
  */
