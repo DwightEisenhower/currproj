@@ -6,14 +6,14 @@ import java.util.*;
  * 4 letter word w/o "m"
  * 1 character that's anything
  * 
- * Find a word that has two non-consecutive a's --> \b\w*
+ * Find a word that has two non-consecutive a's --> \b\w*[Aa]\w+[Aa]\w*\b
  * Find a phrase that ends in a single period or any number of exclamation points --> \b[.]?\W*
- * Find a word that is at least 4 characters long --> \b\w\w\w\w*\b
- * Find if a word follows the "i before e except after c" rule --> 
+ * Find a word that is at least 4 characters long --> \b\w\w\w\w+\b
+ * Find if a word follows the "i before e except after c" rule --> \b\w*[^c]ie\w*\b
  */
 public class Regex {
     public static void main() {
-        String line = "Swimmer goes";
+        String line = "Awesome! The swimmer is unbeatable in 500 freestyle.";
         String regex = "";
         Scanner in = new Scanner(System.in);
         System.out.println(line);
