@@ -10,22 +10,30 @@ import java.util.*;
  * Find a phrase that ends in a single period or any number of exclamation points --> \b[.]?\W*
  * Find a word that is at least 4 characters long --> \b\w\w\w\w+\b
  * Find if a word follows the "i before e except after c" rule --> \b\w*[^c]ie\w*\b
+ * 
+ * Date format mm/dd/yyyy --> \b(\d+\/){2}\d{4}\b
+ * Displays a dollar amount. Note the commas. Periods not always present. --> \$(\d{1,3}\,)?+\d{1,3}(\.\d{2})?\D
  */
 public class Regex {
     public static void main() {
-        String line = "Awesome! The swimmer is unbeatable in 500 freestyle.";
+        String line = "Estimated cost: $20.024";
         String regex = "";
         Scanner in = new Scanner(System.in);
         System.out.println(line);
-        System.out.print("Enter regex: ");
-        regex = in.nextLine();
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(line);
-        if(m.find()) {
-            System.out.println("Match found");
-            System.out.println(m.group());//shows the match
-        } else {
-            System.out.println("No match found");
+        boolean stop = false;
+        while(!stop) {
+            System.out.print("Enter regex: ");
+            regex = in.nextLine();
+            if(regex.equals("stop"))
+                break;
+            Pattern p = Pattern.compile(regex);
+            Matcher m = p.matcher(line);
+            if(m.find()) {
+                System.out.println("Match found");
+                System.out.println(m.group());//shows the match
+            } else {
+                System.out.println("No match found");
+            }
         }
     }
 }
@@ -48,6 +56,11 @@ public class Regex {
  *      (ab)|(bc)|(ca)
  * ? - previous character is optional (colou?r)
  * + - match as many characters as possible (hel+o --> will catch if someone types "helllllo")
- * * - match all or none (ay*lmao
- * 
+ * * - match all or none (ay*lmao)
+ * () - grouping
+ * {} - specify number of something to be found (f.e. \b\w{5}\b will look for 5 letter words, l{2}, (ae){2} ("aeae"))
+ * {x,y} - match x-y characters
+ * ^ - first symbol(s) in the String
+ * $ - goes in the end, indicated that the string must end with the thing
+ * ^{smth}$ - checks if the String is exactly what the regex is
  */
