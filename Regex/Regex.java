@@ -2,9 +2,9 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 import java.util.*;
 /**
- * 4 letter word in a sentence
- * 4 letter word w/o "m"
- * 1 character that's anything
+ * 4 letter word in a sentence - 
+ * 4 letter word w/o "m" - 
+ * 1 character that's anything - .
  * 
  * Find a word that has two non-consecutive a's --> \b\w*[Aa]\w+[Aa]\w*\b
  * Find a phrase that ends in a single period or any number of exclamation points --> \b[.]?\W*
@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class Regex {
     public static void main() {
-        String line = "Estimated cost: $20.024";
+        String line = "Alice was having a most unhappy birthday.  She couldn’t tell which colour she was feeling but it wasn’t her 1, 2 or 3rd favourite.  Their going to miss you’re smile, Alice.";
         String regex = "";
         Scanner in = new Scanner(System.in);
         System.out.println(line);
@@ -26,13 +26,10 @@ public class Regex {
             regex = in.nextLine();
             if(regex.equals("stop"))
                 break;
-            Pattern p = Pattern.compile(regex);
+            Pattern p = Pattern.compile(regex);//Greedy and Lazy: grabs first match found but grabs max 
             Matcher m = p.matcher(line);
-            if(m.find()) {
-                System.out.println("Match found");
-                System.out.println(m.group());//shows the match
-            } else {
-                System.out.println("No match found");
+            while(m.find()) {
+                System.out.println(m.group(0));
             }
         }
     }
@@ -63,4 +60,5 @@ public class Regex {
  * ^ - first symbol(s) in the String
  * $ - goes in the end, indicated that the string must end with the thing
  * ^{smth}$ - checks if the String is exactly what the regex is
+ * (?i) - makes regex case insensitive
  */
