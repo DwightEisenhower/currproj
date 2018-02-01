@@ -29,7 +29,9 @@ public class Regex {
             Pattern p = Pattern.compile(regex);//Greedy and Lazy: grabs first match found but grabs max 
             Matcher m = p.matcher(line);
             while(m.find()) {
-                System.out.println(m.group(0));
+                System.out.print(m.group(0)+"\n");
+                for(int i = 0; i <= m.groupCount(); i++)
+                    System.out.println(i+": "+m.group(i));
             }
         }
     }
@@ -61,4 +63,5 @@ public class Regex {
  * $ - goes in the end, indicated that the string must end with the thing
  * ^{smth}$ - checks if the String is exactly what the regex is
  * (?i) - makes regex case insensitive
+ * \x - grab group X, useful in finding nonconsecutive letters or wherever else you can think of
  */

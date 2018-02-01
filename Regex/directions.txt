@@ -1,0 +1,28 @@
+Answer the below questions using regular expressions. Create a separate method for each question. Submit your code with the 9 methods used to answer the questions and put the answer to each question in this file and submit it as well.
+
+1. How many times is the word “Alice” written? 
+
+
+2. On what lines is the word “Alice” written?
+
+
+3. How many contractions\possessives are written?
+
+
+4. How many words appear in ALL CAPITALS?
+
+
+5. How many 8 letter words are there? (Contractions/possessives are OK, just count the letters only.)
+
+
+6. How many back-to-back 4 letter words are there (“this here”)
+
+
+7. Is there an instance where the same word is said twice in a row on the same line. (regardless of capitalization or spacing or being in a different sentence)
+
+
+8. Which lines contain at least two instances of the same word? (ignoring capitalization).
+
+
+9. Identify the characters whose names are mentioned from most frequent to least. Use to regular
+expressions to aid you in your solution. You may end up needing to verify some parts by hand.
