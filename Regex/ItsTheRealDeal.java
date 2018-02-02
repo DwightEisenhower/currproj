@@ -1,5 +1,6 @@
 import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.ArrayList;
 import java.io.*;
 /**
  * Author: Danylo Mirin
@@ -37,63 +38,67 @@ public class ItsTheRealDeal {
     
     public static void main(String[] args) {
         ItsTheRealDeal proj = new ItsTheRealDeal();
-        proj.one();
-        proj.two();
-        proj.three();
-        proj.four();
-        proj.five();
-        proj.six();
-        proj.seven();
-        proj.eight();
-        proj.nine();
-    }
-    
-    public void one() {
         try {
-            String line = "";
-            int count = 0;
-            while( (line = reader.readLine()) != null) {//O(n)
-                regex = "\\bAlice\\b";
-                pat = Pattern.compile(regex);
-                mat = pat.matcher(line);
-                if(mat.find())
-                    count++;
-            }
+            proj.one();
+            proj.two();
+            proj.three();
+            proj.four();
+            proj.five();
+            proj.six();
+            proj.seven();
+            proj.eight();
+            proj.nine();
         } catch(IOException ex) {
             ex.printStackTrace();
             System.exit(3);
         }
     }
     
-    public void two() {
+    public void one() throws IOException {
+        String line = "";
+        int count = 0;
+        regex = "\\bAlice\\b";
+        while( (line = reader.readLine()) != null) {//O(n)
+            pat = Pattern.compile(regex);
+            mat = pat.matcher(line);
+            while(mat.find())
+                count++;
+        }
+        reader.close();
+        System.out.println(regex+" appears "+count+" times.");
+    }
+    
+    public void two() throws IOException {
+        String line = "";
+        ArrayList<Integer> lineNums = new ArrayList<>();
         
     }
     
-    public void three() {
+    public void three() throws IOException {
         
     }
     
-    public void four() {
+    public void four() throws IOException {
         
     }
     
-    public void five() {
+    public void five() throws IOException {
         
     }
     
-    public void six() {
+    public void six() throws IOException {
         
     }
     
-    public void seven() {
+    public void seven() throws IOException {
         
     }
     
-    public void eight() {
+    public void eight() throws IOException {
         
     }
     
-    public void nine() {
+    public void nine() throws IOException {
         
     }
 }
