@@ -64,18 +64,37 @@ public class ItsTheRealDeal {
             while(mat.find())
                 count++;
         }
-        reader.close();
-        System.out.println(regex+" appears "+count+" times.");
+        System.out.println("'Alice' appears "+count+" times.");
     }
     
     public void two() throws IOException {
         String line = "";
         ArrayList<Integer> lineNums = new ArrayList<>();
-        
+        regex = "Alice";
+        int lineNumber = 0;
+        while( (line = reader.readLine()) != null) {
+            pat = Pattern.compile(regex);
+            mat = pat.matcher(line);
+            if(mat.find()) {
+                System.out.println("match found");
+                lineNums.add(lineNumber);
+            }
+            lineNumber++;
+        }
+        System.out.println("The following lines contain the name Alice: "+lineNums.toString());
     }
     
     public void three() throws IOException {
-        
+        String line = "";
+        int count = 0;
+        regex = "\\b\\w+'\\w\\b";
+        while( (line = reader.readLine()) != null) {
+            pat = Pattern.compile(regex);
+            mat = pat.matcher(line);
+            while(mat.find())
+                count++;
+        }
+        System.out.println(count+" contractions and possessives");
     }
     
     public void four() throws IOException {
@@ -100,5 +119,13 @@ public class ItsTheRealDeal {
     
     public void nine() throws IOException {
         
+    }
+    
+    private ArrayList<String> readFromFile() throws IOException {
+        ArrayList<String> lines = new ArrayList<>();
+        String line;
+        while( (line = reader.readLine()) != null)
+            lines.add(line);
+        return lines;
     }
 }
