@@ -162,50 +162,40 @@ public class ItsTheRealDeal {
             else
                 count = 0;
         }
-        System.out.println("A word repeating 2+ times is found on lines "+lineNums);
+        System.out.println("A word repeating 2+ times is found on lines "+lineNums.toString());
     }
     
     public void nine() throws IOException {
         HashMap<String, Integer> characters = new HashMap<>();
-        characters.put("Alice", 0);
-        characters.put("March Hare", 0);
-        characters.put("Hatter", 0);
-        characters.put("Dormouse", 0);
-        characters.put("Time", 0);
-        characters.put("Queen", 0);
-        characters.put("Elsie", 0);
-        characters.put("Lacie", 0);
-        characters.put("Tillie", 0);
-        //Alice code (copied)
         for(int i = 0; i < 9; i++) {
             int count = 0;
             switch(i) {
                 case 0:
-                    regex = "\\b"+"Alice"+"\\b";
+                    regex = "Alice";
                     break;
                 case 1:
-                    regex = "\\b"+"March Hare"+"\\b";
+                    regex = "March Hare";
                     break;
                 case 2:
-                    regex = "\\b"+"Hatter"+"\\b";
+                    regex = "Hatter";
                     break;
                 case 3:
-                    regex = "\\b"+"Dormouse"+"\\b";
+                    regex = "Dormouse";
                     break;
                 case 4:
-                    regex = "\\b"+"Time"+"\\b";
+                    regex = "Time";
                     break;
                 case 5:
-                    regex = "\\b"+"Queen"+"\\b";
+                    regex = "Queen";
                     break;
                 case 6:
-                    regex = "\\b"+"Elsie"+"\\b";
+                    regex = "Elsie";
                     break;
                 case 7:
-                    regex = "\\b"+"Lacie"+"\\b";
+                    regex = "Lacie";
                     break;
                 case 8:
-                    regex = "\\b"+"Tillie"+"\\b";
+                    regex = "Tillie";
                     break;
                 default:
                     break;
@@ -213,11 +203,17 @@ public class ItsTheRealDeal {
             
             pat = Pattern.compile(regex);
             for(int j = 0; j < lines.size(); j++ ) {
-                mat = pat.matcher(lines.get(0));
+                mat = pat.matcher(lines.get(i));
                 while(mat.find())
                     count++;
             }
+            characters.put(regex, count);
         }
+        PriorityQueue<Integer> pq = new PriorityQueue();
+        for(String s : characters.keySet()) {
+            pq.add(characters.get(s));
+        }
+        System.out.println(pq);
     }
     
     private void readFromFile() throws IOException {
