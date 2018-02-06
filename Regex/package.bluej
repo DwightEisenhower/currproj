@@ -1,7 +1,7 @@
 #BlueJ package file
 editor.fx.0.height=863
 editor.fx.0.width=902
-editor.fx.0.x=656
+editor.fx.0.x=423
 editor.fx.0.y=23
 objectbench.height=75
 objectbench.width=131
@@ -30,7 +30,7 @@ target1.showInterface=false
 target1.type=ClassTarget
 target1.typeParameters=
 target1.width=80
-target1.x=70
+target1.x=60
 target1.y=10
 target2.height=50
 target2.name=ItsTheRealDeal
@@ -39,5 +39,5 @@ target2.showInterface=false
 target2.type=ClassTarget
 target2.typeParameters=
 target2.width=120
-target2.x=70
-target2.y=70
+target2.x=20
+target2.y=80

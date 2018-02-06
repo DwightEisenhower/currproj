@@ -1,4 +1,4 @@
-Answer the below questions using regular expressions. Create a separate method for each question. Submit your code with the 9 methods used to answer the questions and put the answer to each question in this file and submit it as well.
+ElsieAnswer the below questions using regular expressions. Create a separate method for each question. Submit your code with the 9 methods used to answer the questions and put the answer to each question in this file and submit it as well.
 
 1. How many times is the word “Alice” written? 
 
