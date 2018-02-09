@@ -46,14 +46,14 @@ public class ItsTheRealDeal {
     
     public static void main(String[] args) {
         ItsTheRealDeal proj = new ItsTheRealDeal();
-        /*proj.one();
+        proj.one();
         proj.two();
         proj.three();
         proj.four();
         proj.five();
         proj.six();
         proj.seven();
-        proj.eight();*/
+        proj.eight();
         proj.nine();
     }
     
@@ -151,10 +151,10 @@ public class ItsTheRealDeal {
     public void eight() {
         ArrayList<Integer> lineNums = new ArrayList<>();
         int count = 0;
-        regex = "((\\b\\w+\\b).+){2,}";
+        regex = "(?i)(\\b\\w+\\b).+\\1";
         pat = Pattern.compile(regex);
         for(int i = 0; i < lines.size(); i++ ) {
-            mat = pat.matcher(lines.get(i).toLowerCase());
+            mat = pat.matcher(lines.get(i));
             while(mat.find())
                 count++;
             if(count >= 2)

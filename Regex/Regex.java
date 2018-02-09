@@ -16,7 +16,7 @@ import java.util.*;
  */
 public class Regex {
     public static void main() {
-        String line = "Alice was having a most unhappy birthday.  She couldn’t tell which colour she was feeling but it wasn’t her 1, 2 or 3rd favourite.  Their going to miss you’re smile, Alice.";
+        String line = "Mississippi";
         String regex = "";
         Scanner in = new Scanner(System.in);
         System.out.println(line);
@@ -64,4 +64,7 @@ public class Regex {
  * ^{smth}$ - checks if the String is exactly what the regex is
  * (?i) - makes regex case insensitive
  * \x - grab group X, useful in finding nonconsecutive letters or wherever else you can think of
+ * [special notation]? - do the opposite of the usual behavoir
+ *      (.*?) --> reluctant, takes characters only if necessary
+ *      (.*+) --> possessive, won't give up characters          
  */

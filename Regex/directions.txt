@@ -24,5 +24,4 @@ ElsieAnswer the below questions using regular expressions. Create a separate met
 8. Which lines contain at least two instances of the same word? (ignoring capitalization).
 
 
-9. Identify the characters whose names are mentioned from most frequent to least. Use to regular
-expressions to aid you in your solution. You may end up needing to verify some parts by hand.
+9. Identify the characters whose names are mentioned from most frequent to least. Use to regular expressions to aid you in your solution. You may end up needing to verify some parts by hand.
