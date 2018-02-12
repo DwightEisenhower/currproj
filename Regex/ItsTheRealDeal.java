@@ -165,13 +165,14 @@ public class ItsTheRealDeal {
         System.out.println("A word repeating 2+ times is found on line(s) "+lineNums.toString());
     }
     
-    //I know that this solution is overcomplicated and doesn't fully work but I am out of ideas and out of time.
+    //I know that this solution is somewhat overcomplicated and doesn't fully work but I am out of ideas and out of time.
     public void nine() {
         class Character implements Comparable<Character> {
             public String name;
             public int mentions;
-            public Character(String name) {
+            public Character(String name, int mentions) {
                 this.name = name;
+                this.mentions = mentions;
             }
             
             @Override public int compareTo(Character other) {
@@ -179,33 +180,28 @@ public class ItsTheRealDeal {
                 else if(mentions < other.mentions) return -1;
                 else return 0;
             }
-        }
-        ArrayList<Character> characters = new ArrayList<>();
-        characters.add(new Character("Alice"));
-        characters.add(new Character("March Hare"));
-        characters.add(new Character("Hatter"));
-        characters.add(new Character("Dormouse"));
-        characters.add(new Character("Time"));
-        characters.add(new Character("Queen"));
-        characters.add(new Character("Elsie"));
-        characters.add(new Character("Lacie"));
-        characters.add(new Character("Tillie"));
-        for(int i = 0; i < 9; i++) {
-            regex = characters.get(i).name;
-            int count = 0;
-            Pattern p = Pattern.compile(regex);
-            for(int j = 0; j < lines.size(); j++ ) {
-                Matcher m = p.matcher(lines.get(i));
-                while(m.find())
-                    count++;
+            
+            public String toString() {
+                return name+" mentioned "+mentions+" times.";
             }
-            System.out.println(regex+" matched "+count+" times");
-            characters.get(i).mentions = count;
         }
-        PriorityQueue<Character> pq = new PriorityQueue();
-        for(Character c : characters)
-            pq.add(c);
-        for(Character c : pq)
-            System.out.println(c.name+" has been mentioned "+c.mentions+" times.");
+        ArrayList<String> names = new ArrayList<>();
+        HashMap<String, Integer> map = new HashMap<>();
+        regex = "\\b([A-Z]\\w{2,})\\b";
+        pat = Pattern.compile(regex);
+        for(int j = 0; j < lines.size(); j++ ) {
+            mat = pat.matcher(lines.get(j));
+        }
+        for(int i = 1; i < mat.groupCount(); i++) {
+            System.out.print(mat.group(i)+", ");
+            if(!(map.get(mat.group(i)) == null)) 
+                map.replace(mat.group(i), map.get(mat.group(i))+1);
+            else
+                map.put(mat.group(i),1);
+        }
+        PriorityQueue<Character> pq = new PriorityQueue<>();
+        for(String s : map.keySet())
+            pq.add(new Character(s, map.get(s)));
+        System.out.println(pq);
     }
 }

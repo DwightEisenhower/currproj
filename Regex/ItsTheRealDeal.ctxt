@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=ItsTheRealDeal
-comment0.text=\n\ Author\:\ Danylo\ Mirin\n\ Assignment\:\ Regex\n\ Date\:\ February\ 1st,\ 2018\n\ \n\ Error\ codes\:\n\ 1\ \=\ alice.txt\ not\ found\n\ 2\ \=\ no\ reading\ permissions\n\ 3\ \=\ unexpected\ IO\ exception\n
+comment0.text=\r\n\ Author\:\ Danylo\ Mirin\r\n\ Assignment\:\ Regex\r\n\ Date\:\ February\ 1st,\ 2018\r\n\ \r\n\ Error\ codes\:\r\n\ 1\ \=\ alice.txt\ not\ found\r\n\ 2\ \=\ no\ reading\ permissions\r\n\ 3\ \=\ unexpected\ IO\ exception\r\n
 comment1.params=
 comment1.target=ItsTheRealDeal()
 comment10.params=
