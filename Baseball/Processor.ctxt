@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Processor
+comment0.text=\n\ Baseball\ stat\ processor\n\ @Author\ Danylo\ Mirin\n\ @Date\ 12\ February\ 2018\n\ @Copyright\ 2018\n\ \n\ @Error\ codes\n\ 1\ \=\ stats.csv\ nonexistent\n\ 2\ \=\ reading\ failure\n\ 3\ \=\ writing\ failure\n
+comment1.params=
+comment1.target=Processor()
+comment2.params=
+comment2.target=void\ main()
+comment3.params=
+comment3.target=void\ run()
+comment4.params=line
+comment4.target=boolean\ breakdown(java.lang.String)
+comment5.params=f
+comment5.target=void\ readFromFile(java.io.File)
+comment6.params=f\ lines
+comment6.target=boolean\ writeToFile(java.io.File,\ java.util.ArrayList)
+comment7.params=code
+comment7.target=void\ end(int)
+numComments=8
