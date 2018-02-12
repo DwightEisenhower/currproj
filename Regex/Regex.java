@@ -32,6 +32,8 @@ public class Regex {
                 System.out.print(m.group(0)+"\n");
                 for(int i = 0; i <= m.groupCount(); i++)
                     System.out.println(i+": "+m.group(i));
+                //m.replaceFirst("I");
+                System.out.println(m.replaceAll(m.group(2)));
             }
         }
     }
@@ -66,5 +68,6 @@ public class Regex {
  * \x - grab group X, useful in finding nonconsecutive letters or wherever else you can think of
  * [special notation]? - do the opposite of the usual behavoir
  *      (.*?) --> reluctant, takes characters only if necessary
- *      (.*+) --> possessive, won't give up characters          
+ *      (.*+) --> possessive, won't give up characters
+ * 
  */
