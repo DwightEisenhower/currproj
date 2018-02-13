@@ -79,8 +79,34 @@ public class Processor {
         System.out.println("System failure. Code "+code);
         System.exit(code);
     }
+    /*#Shit code ahead!*/
     public class Player {
-        private String name, team;
-        private int ab, r, h, twob, threeb, hr, rbi, sb, cs;
+        public String name, team;
+        public int ab, r, h, twob, pw, rbi, sb, cs, bb, so;
+        public double avg, obp, slg, ops, war;
+        public Player(String name, String team, int ab, int r, int h, int twob, int threeb, int hr, int rbi, int sb, int cs, int bb, int so, double avg, double obp, double slg, double ops, double war) {
+            this.name = name;
+            this.team = team;
+            this.ab = ab;
+            this.r = r;
+            this.h = h;
+            this.twob = twob;
+            pw = threeb+hr;
+            this.rbi = rbi;
+            this.sb = sb;
+            this.cs = cs;
+            this.bb = bb;
+            this.so = so;
+            this.avg = avg;
+            this.obp = obp;
+            this.slg = slg;
+            this.ops = ops;
+            this.war = war;
+        }
+        
+        public String toString() {
+            String coma = ",";
+            return name+coma+team+coma+ab+coma+r+coma+h+coma+twob+coma+pw+coma+rbi+coma+sb+coma+cs+coma+bb+coma+so+coma+avg+coma+obp+coma+slg+coma+ops+coma+war;
+        }
     }
 }
