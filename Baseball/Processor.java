@@ -17,6 +17,7 @@ public class Processor {
     private BufferedReader reader;
     private FileWriter writer;
     private ArrayList<String> lines;
+    private ArrayList<Player> players;
     private File file;
     public Processor() {
         try {
@@ -34,12 +35,32 @@ public class Processor {
     }
     
     public void run() {
+        //Load players
+        for(int i = 1; i < lines.size(); i++)
+            players.add(breakdown(lines.get(i)));
+        //Clean the list (merging 3b and HR is already done in the Player class)
+        for(int i = 0; i < players.size(); i++) {
+            players.get(i).slg += 0.052;
+            if(players.get(i).team.equals("KC") || players.get(i).team.equals("NYY") || players.get(i).avg < 0.275 || players.get(i).ab < 200) {
+                players.remove(i);
+                i--;
+            }
+        }
         
     }
     
-    private boolean breakdown(String line) {
-        
-        return true;
+    private Player breakdown(String line) {
+        String[] parts = line.substring(1).split(",");
+        ArrayList<Double> numChar = new ArrayList<>();
+        String regex = "^\\d+(\\.\\d+)?$";
+        Pattern p = Pattern.compile(regex);
+        Matcher m;
+        for(String s : parts) {
+            m = p.matcher(s);
+            if(m.find())
+                numChar.add(Double.parseDouble(s));
+        }
+        return new Player(parts[0], parts[1], numChar);
     }
     
     private void readFromFile(File f) throws FileNotFoundException {
@@ -79,29 +100,31 @@ public class Processor {
         System.out.println("System failure. Code "+code);
         System.exit(code);
     }
-    /*#Shit code ahead!*/
+    /*#Disclaimer: bad code ahead!*/
     public class Player {
         public String name, team;
         public int ab, r, h, twob, pw, rbi, sb, cs, bb, so;
         public double avg, obp, slg, ops, war;
-        public Player(String name, String team, int ab, int r, int h, int twob, int threeb, int hr, int rbi, int sb, int cs, int bb, int so, double avg, double obp, double slg, double ops, double war) {
+        public Player(String name, String team, ArrayList<Double> chars) {
             this.name = name;
             this.team = team;
-            this.ab = ab;
-            this.r = r;
-            this.h = h;
-            this.twob = twob;
-            pw = threeb+hr;
-            this.rbi = rbi;
-            this.sb = sb;
-            this.cs = cs;
-            this.bb = bb;
-            this.so = so;
-            this.avg = avg;
-            this.obp = obp;
-            this.slg = slg;
-            this.ops = ops;
-            this.war = war;
+            //ints
+            ab = (int) chars.get(0).doubleValue();
+            r = (int) chars.get(1).doubleValue();
+            h = (int) chars.get(2).doubleValue();
+            twob = (int) chars.get(3).doubleValue();
+            pw = (int) (chars.get(4)+chars.get(5));
+            rbi = (int) chars.get(6).doubleValue();
+            sb = (int) chars.get(7).doubleValue();
+            cs = (int) chars.get(8).doubleValue();
+            bb = (int) chars.get(9).doubleValue();
+            so = (int) chars.get(10).doubleValue();
+            //doubles
+            avg = chars.get(11);
+            obp = chars.get(12);
+            slg = chars.get(13);
+            ops = chars.get(14);
+            war = chars.get(15);
         }
         
         public String toString() {

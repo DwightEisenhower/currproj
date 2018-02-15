@@ -44,7 +44,7 @@ public class Sorts<E extends Comparable<? super E>> {
         }
     }
     
-    /**Constant nlon(n)  time*/
+    /**Constant nlog(n)  time*/
     public void mergeSort(List<E> data){
         if(data.size() == 1)
             return;
@@ -108,6 +108,7 @@ public class Sorts<E extends Comparable<? super E>> {
         insertionSort( (List<E>) data);
     }
     
+    /**Worst: O(kn); best: O(k+n) where k = numBuckets*/
     public void radixSort(List<Integer> data){
         final int NUMBUCKETS = 10;
         Integer large = data.get(0);
@@ -131,6 +132,8 @@ public class Sorts<E extends Comparable<? super E>> {
     }
     
     /**
+     * Best: O(n), worst: O(n^2)
+     * Procedure:
      * Select a pivot
      * Create 2 lists - smaller & larger
      * Sort the data based on the pivot
