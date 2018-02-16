@@ -12,20 +12,27 @@ import java.util.regex.Matcher;
  * 1 = stats.csv nonexistent
  * 2 = reading failure
  * 3 = writing failure
+ * 4 = file creation failure
  */
 public class Processor {
     private BufferedReader reader;
     private FileWriter writer;
-    private ArrayList<String> lines;
-    private ArrayList<Player> players;
-    private File file;
+    private ArrayList<String> lines = new ArrayList<>();
+    private ArrayList<Player> players = new ArrayList<Player>();
+    private File input, output;
     public Processor() {
         try {
-            file = new File("stats.csv");
-            readFromFile(file);
+            input = new File("stats.csv");
+            output = new File("adjustedStats.csv");
+            if(!output.exists())
+                output.createNewFile();
+            readFromFile(input);
         } catch(FileNotFoundException ex) {
             ex.printStackTrace();
             end(1);
+        } catch(IOException ex) {
+            ex.printStackTrace();
+            end(4);
         }
     }
     
@@ -46,7 +53,8 @@ public class Processor {
                 i--;
             }
         }
-        
+        Collections.sort(players);
+        writeToFile(output, players);
     }
     
     private Player breakdown(String line) {
@@ -65,7 +73,7 @@ public class Processor {
     
     private void readFromFile(File f) throws FileNotFoundException {
         //BufferedReader to read from file, reads & returns a string
-        reader = new BufferedReader(new FileReader(file));
+        reader = new BufferedReader(new FileReader(input));
         lines = new ArrayList<String>();
         int index = 0;
         try {
@@ -79,13 +87,15 @@ public class Processor {
         }
     }
     
-    private boolean writeToFile(File f, ArrayList<String> lines) {
+    private boolean writeToFile(File f, ArrayList<Player> lines) {
         if(lines.isEmpty())
             return false;
         try {
             writer = new FileWriter(f);
+            writer.write(lines.get(0));
+            int c = 1;
             while(!lines.isEmpty())
-                writer.write(lines.remove(0));
+                writer.write(c+","+lines.remove(0).toString()+"\n");
             writer.flush();
             writer.close();
             return true;
@@ -101,7 +111,7 @@ public class Processor {
         System.exit(code);
     }
     /*#Disclaimer: bad code ahead!*/
-    public class Player {
+    public class Player implements Comparable<Player> {
         public String name, team;
         public int ab, r, h, twob, pw, rbi, sb, cs, bb, so;
         public double avg, obp, slg, ops, war;
@@ -125,6 +135,12 @@ public class Processor {
             slg = chars.get(13);
             ops = chars.get(14);
             war = chars.get(15);
+        }
+        
+        public int compareTo(Player other) {
+            if(other.avg > avg) return -1;
+            else if(other.avg < avg) return 1;
+            else return 0;
         }
         
         public String toString() {
