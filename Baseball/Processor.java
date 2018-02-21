@@ -46,27 +46,31 @@ public class Processor {
         for(int i = 1; i < lines.size(); i++)
             players.add(breakdown(lines.get(i)));
         //Clean the list (merging 3b and HR is already done in the Player class)
-        for(int i = 0; i < players.size(); i++) {
-            players.get(i).slg += 0.052;
-            if(players.get(i).team.equals("KC") || players.get(i).team.equals("NYY") || players.get(i).avg < 0.275 || players.get(i).ab < 200) {
-                players.remove(i);
-                i--;
-            }
+        ArrayList<Player> temp = new ArrayList<>();
+        while(!players.isEmpty()) {
+            players.get(0).slg += 0.052;
+            if(players.get(0).team.equals("KC") || players.get(0).team.equals("NYY") || players.get(0).avg < 0.275 || players.get(0).ab < 200)
+                players.remove(0);
+            else
+                temp.add(players.remove(0));
         }
+        players.clear();
+        players.addAll(temp);
         Collections.sort(players);
         writeToFile(output);
     }
     
     private Player breakdown(String line) {
-        String[] parts = line.substring(1).split(",");
+        String[] parts = line.split(",");
         ArrayList<Double> numChar = new ArrayList<>();
-        String regex = "^\\d+(\\.\\d+)?$";
+        String regex = "^\\-?\\d+?(\\.\\d+)?$";
         Pattern p = Pattern.compile(regex);
         Matcher m;
-        for(String s : parts) {
-            m = p.matcher(s);
-            if(m.find())
-                numChar.add(Double.parseDouble(s));
+        for(int i = 1; i < parts.length; i++) {
+            m = p.matcher(parts[i]);
+            if(m.find()) {
+                numChar.add(Double.parseDouble(parts[i]));
+            }
         }
         return new Player(parts[1], parts[2], numChar);
     }

@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Processor
-comment0.text=\r\n\ Baseball\ stat\ processor\r\n\ @Author\ Danylo\ Mirin\r\n\ @Date\ 12\ February\ 2018\r\n\ @Copyright\ 2018\r\n\ \r\n\ @Error\ codes\r\n\ 1\ \=\ stats.csv\ nonexistent\r\n\ 2\ \=\ reading\ failure\r\n\ 3\ \=\ writing\ failure\r\n\ 4\ \=\ file\ creation\ failure\r\n
+comment0.text=\n\ Baseball\ stat\ processor\n\ @Author\ Danylo\ Mirin\n\ @Date\ 12\ February\ 2018\n\ @Copyright\ 2018\n\ \n\ @Error\ codes\n\ 1\ \=\ stats.csv\ nonexistent\n\ 2\ \=\ reading\ failure\n\ 3\ \=\ writing\ failure\n\ 4\ \=\ file\ creation\ failure\n
 comment1.params=
 comment1.target=Processor()
 comment2.params=
