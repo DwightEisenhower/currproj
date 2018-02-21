@@ -54,7 +54,7 @@ public class Processor {
             }
         }
         Collections.sort(players);
-        writeToFile(output, players);
+        writeToFile(output);
     }
     
     private Player breakdown(String line) {
@@ -68,7 +68,7 @@ public class Processor {
             if(m.find())
                 numChar.add(Double.parseDouble(s));
         }
-        return new Player(parts[0], parts[1], numChar);
+        return new Player(parts[1], parts[2], numChar);
     }
     
     private void readFromFile(File f) throws FileNotFoundException {
@@ -87,15 +87,18 @@ public class Processor {
         }
     }
     
-    private boolean writeToFile(File f, ArrayList<Player> lines) {
-        if(lines.isEmpty())
+    private boolean writeToFile(File f) {
+        if(players.isEmpty())
             return false;
         try {
             writer = new FileWriter(f);
-            writer.write(lines.get(0));
+            int temp = lines.get(0).indexOf("3B");
+            writer.write(lines.get(0).substring(0, temp)+"PW"+lines.get(0).substring(temp+5)+"\n");
             int c = 1;
-            while(!lines.isEmpty())
-                writer.write(c+","+lines.remove(0).toString()+"\n");
+            while(!players.isEmpty()) {
+                writer.write(c+","+players.remove(0).toString()+"\n");
+                c++;
+            }
             writer.flush();
             writer.close();
             return true;
